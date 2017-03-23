@@ -1,0 +1,52 @@
+{
+  "name": "request.js",
+  "version": "0.0.0",
+  "description": "A fetch api enhanced.",
+  "main": "./lib/index.js",
+  "scripts": {
+    "build": "babel src -d lib",
+    "lint": "eslint src/**",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/by-healthFED/request.js.git"
+  },
+  "keywords": [
+    "fetch",
+    "ajax",
+    "request"
+  ],
+  "author": "pengxp <pengxp@by-health.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/by-healthFED/request.js/issues"
+  },
+  "homepage": "https://github.com/by-healthFED/request.js#readme",
+  "dependencies": {
+    "extend": "^3.0.0",
+    "query-string": "^4.3.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-eslint": "^7.2.0",
+    "babel-preset-env": "^1.2.2",
+    "babel-preset-stage-2": "^6.22.0",
+    "eslint": "^3.16.1",
+    "eslint-config-airbnb-base": "^11.1.1",
+    "eslint-plugin-import": "^2.2.0"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "stage-2"
+    ]
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": "airbnb-base",
+    "env": {
+      "browser": true
+    }
+  }
+}
