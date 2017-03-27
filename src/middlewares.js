@@ -21,6 +21,25 @@ export function http(request) {
 }
 
 /**
+ * Json middleware
+ *
+ * @export
+ * @param {Promise} request
+ * @returns {Promise}
+ */
+export function json(request) {
+  return request.then((responseText) => {
+    const resp = typeof responseText === 'string' ? JSON.parse(responseText) : responseText;
+
+    if (resp.status === '0') {
+      return Promise.resolve(resp.body);
+    }
+
+    return Promise.reject(resp);
+  });
+}
+
+/**
  * RESTful middleware
  *
  * @export
